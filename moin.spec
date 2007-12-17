@@ -17,7 +17,6 @@ Patch1:		moin-1.5.6-xml_newline.patch.bz2
 Patch2:		moin-1.5.6-moin.cgi.patch.bz2
 Patch3:		moin-1.5.6-wikiconfig.patch.bz2
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:	python
 Requires:	python-base
 BuildRequires:	dos2unix
