@@ -1,6 +1,6 @@
 %define	name	moin
 %define	version	1.5.6
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 Summary:	Python clone of WikiWiki
 Name:		%name
