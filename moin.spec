@@ -1,11 +1,10 @@
 %define	name	moin
 %define	version	1.5.7
-%define	release	%mkrel 1
 
 Summary:	Python clone of WikiWiki
-Name:		%name
-Version:	%version
-Release:	%release
+Name:		%{name}
+Version:	%{version}
+Release:	%mkrel 1
 License:	GPL
 Group:		Networking/WWW
 URL:		http://moinmoin.wikiwikiweb.de/
