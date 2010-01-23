@@ -1,5 +1,5 @@
 %define	name	moin
-%define	version	1.5.7
+%define	version	1.9.1
 
 Summary:	Python clone of WikiWiki
 Name:		%{name}
@@ -11,9 +11,6 @@ URL:		http://moinmoin.wikiwikiweb.de/
 Source0:	http://dl.sf.net/moin/%{name}-%{version}.tar.gz
 Source1:	README.RPM
 Source2:	apache2-moin.conf
-Patch0:		moin-1.5.6-multiconfig.patch
-Patch1:		moin-1.5.6-xml_newline.patch
-Patch2:		moin-1.5.7-python-2.6.patch
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:	apache-conf
@@ -32,9 +29,6 @@ Web server and a Python installation.
 
 %prep
 %setup -q
-%patch0 -p1 -b .multiconfig
-%patch1 -p1 -b .xml_newline
-%patch2 -p1
 
 %build
 %__python setup.py build 
