@@ -33,7 +33,7 @@ Web server and a Python installation.
 
 %install
 rm -rf %{buildroot}
-%__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
+%__python setup.py install --root=%{buildroot}
 
 cp %SOURCE1 README.update.urpmi
 
@@ -52,9 +52,13 @@ rm -rf %{buildroot}
 %postun
 %{_initrddir}/httpd reload
 
-%files -f INSTALLED_FILES
+%files 
 %defattr(-,root,root)
 %doc README README.update.urpmi docs/CHANGES* docs/INSTALL.html docs/README.migration
 %doc docs/licenses/
 %{_bindir}/moin
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/conf.d/moin.conf
+%_datadir/%name/
+%py_puresitedir/jabberbot
+%py_puresitedir/MoinMoin
+%py_puresitedir/*.egg-info
