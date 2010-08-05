@@ -15,8 +15,6 @@ BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Requires:	apache-conf
 Requires:	python
-Requires:	python-base
-BuildRequires:	python
 BuildRequires:	python-devel
 Obsoletes:	moin-apache2 <= 1.1
 Obsoletes:	moin-apache2-unsafe <= 1.1
