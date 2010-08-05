@@ -1,5 +1,5 @@
 %define	name	moin
-%define	version	1.9.1
+%define	version	1.9.3
 
 Summary:	Python clone of WikiWiki
 Name:		%{name}
@@ -7,8 +7,8 @@ Version:	%{version}
 Release:	%mkrel 1
 License:	GPL
 Group:		Networking/WWW
-URL:		http://moinmoin.wikiwikiweb.de/
-Source0:	http://dl.sf.net/moin/%{name}-%{version}.tar.gz
+URL:		http://moinmo.in/
+Source0:	http://static.moinmo.in/files/%{name}-%{version}.tar.gz
 Source1:	README.RPM
 Source2:	apache2-moin.conf
 BuildArch:	noarch
