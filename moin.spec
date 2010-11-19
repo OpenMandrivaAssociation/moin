@@ -4,7 +4,7 @@
 Summary:	Python clone of WikiWiki
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2
 Group:		Networking/WWW
 URL:		http://moinmo.in/
