@@ -1,0 +1,29 @@
+Quick Setup for a MoinMoin Wiki:
+
+ The following steps are required for every Wiki instance:
+
+  - create wiki data directory:
+     mkdir /var/www/mywiki
+     cp -ra /usr/share/moin/data /var/www/mywiki
+     cp -a /usr/share/moin/cgi-bin/* /var/www/mywiki
+
+  - we use shared intermap, so we put an empty one into the data dir:
+     rm -f /var/www/mywiki/data/intermap.txt
+     touch /var/www/mywiki/data/intermap.txt
+
+  - adapt permissions:
+     chmod a+x /var/www/mywiki/moin.cgi
+     chown -R apache:apache /var/www/mywiki/data
+     chown -R root:apache /var/www/mywiki/data/plugin
+     chown root:root /var/www/mywiki/data/intermap.txt
+     chmod u+rw,g+rw /var/www/mywiki/data
+
+  - put the following lines into /etc/httpd/conf.d/wiki.conf:
+
+     Alias       /wiki-htdocs/ "/usr/share/moin/htdocs/"
+     ScriptAlias /MyWiki       "/var/www/mywiki/moin.cgi"
+
+  - /etc/init.d/httpd reload
+
+  - edit /var/www/mywiki/moin_config.py
+
