@@ -7,7 +7,7 @@ Version:	%{version}
 Release:	3
 License:	GPLv2
 Group:		Networking/WWW
-URL:		http://moinmo.in/
+URL:		https://moinmo.in/
 Source0:	http://static.moinmo.in/files/%{name}-%{version}.tar.gz
 Source1:	README.RPM
 Source2:	apache2-moin.conf
